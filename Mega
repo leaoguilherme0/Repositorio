@@ -1,0 +1,172 @@
+package com.numeromega;
+public class TelaNumeroMega extends javax.swing.JFrame {
+    public TelaNumeroMega() {
+        initComponents();
+        setLocationRelativeTo( null );
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        lblNum1 = new javax.swing.JLabel();
+        btnGerar = new javax.swing.JButton();
+        lblNum2 = new javax.swing.JLabel();
+        lblNum3 = new javax.swing.JLabel();
+        lblNum4 = new javax.swing.JLabel();
+        lblNum5 = new javax.swing.JLabel();
+        lblNum6 = new javax.swing.JLabel();
+        lblMensagem = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnGerar.setText("Executar");
+        btnGerar.setActionCommand("");
+        btnGerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerarActionPerformed(evt);
+            }
+        });
+
+        lblMensagem.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblMensagem.setForeground(new java.awt.Color(255, 0, 0));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("SOLUCIONADOR DE PROBLEMAS");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnGerar)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(43, 43, 43))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGerar)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNum6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNum4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNum3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNum2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNum5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(lblMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void btnGerarActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+        
+        int gerador1 = (int) Math.round(1 + Math.random()*(60-1));
+        String num1 = Integer.toString(gerador1);
+        lblNum1.setText(num1);
+        
+        int gerador2 ;//= gerador1;
+        do
+            {
+                gerador2 = (int) Math.round(1 + Math.random()*(60-1));
+            }while(gerador2 == gerador1);
+        String num2 = Integer.toString(gerador2);
+        lblNum2.setText(num2);
+
+        int gerador3 ;//= gerador1;
+        do
+            {
+                gerador3 = (int) Math.round(1 + Math.random()*(60-1));
+            }while(gerador3 == gerador1 || gerador3 == gerador2);
+        String num3 = Integer.toString(gerador3);
+        lblNum3.setText(num3);
+        
+        int gerador4 ;//= gerador1;
+        do
+            {
+                gerador4 = (int) Math.round(1 + Math.random()*(60-1));
+            }while(gerador4 == gerador1 || gerador4 == gerador2 || gerador4 == gerador3);
+        String num4 = Integer.toString(gerador4);
+        lblNum4.setText(num4);
+        
+        int gerador5 ;//= gerador1;
+        do
+            {
+                gerador5 = (int) Math.round(1 + Math.random()*(60-1));
+            }while(gerador5 == gerador1 || gerador5 == gerador2 || gerador5 == gerador3 || gerador5 == gerador4);
+        String num5 = Integer.toString(gerador5);
+        lblNum5.setText(num5);
+        
+        int gerador6 ;//= gerador1;
+        do
+            {
+                gerador6 = (int) Math.round(1 + Math.random()*(60-1));
+            }while(gerador6 == gerador1 || gerador6 == gerador2 || gerador6 == gerador3 || gerador6 == gerador4 
+                || gerador6 == gerador5);
+        String num6 = Integer.toString(gerador6);
+        lblNum6.setText(num6);
+        
+        lblMensagem.setText("Faça esse jogo da mega e fique rico");
+    }                                        
+
+     public static void main(String args[]) {
+        
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TelaNumeroMega.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TelaNumeroMega.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TelaNumeroMega.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TelaNumeroMega.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+    
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaNumeroMega().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton btnGerar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel lblMensagem;
+    private javax.swing.JLabel lblNum1;
+    private javax.swing.JLabel lblNum2;
+    private javax.swing.JLabel lblNum3;
+    private javax.swing.JLabel lblNum4;
+    private javax.swing.JLabel lblNum5;
+    private javax.swing.JLabel lblNum6;
+    // End of variables declaration                   
+}
